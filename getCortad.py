@@ -3,7 +3,7 @@ import numpy as np
 from netCDF4 import Dataset
 import numpy.ma as ma
 import matplotlib.pyplot as plt
-from mpl_toolkits.basemap import Basemap, shiftgrid, NetCDFFile
+from mpl_toolkits.basemap import Basemap, shiftgrid #, NetCDFFile
 from pylab import *
 #import laplaceFilter
 import mpl_util
