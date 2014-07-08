@@ -26,4 +26,4 @@ G['t'] = gt[:].squeeze()
 
 sst = raw_sst * raw_sst.scale_factor + raw_sst.add_offset
 
-print sst
+print raw_sst
