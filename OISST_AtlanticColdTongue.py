@@ -101,20 +101,23 @@ for tick in ax.xaxis.get_minor_ticks():
     tick.tick2line.set_markersize(0)
     tick.label1.set_horizontalalignment('center')
 
-plt.savefig('OISST_AtlanticColdTongue.png')
-plt.show()
+#plt.savefig('OISST_AtlanticColdTongue.png')
+#plt.show()
 
 #  Make another plot, simpler, cleaner, repeating the annual cycle
 rsst = vstack((sstt, sstt)) # [r]epeated [sst]
+rsstm = hstack((msst, msst))
 two_years = hstack((month_labels, month_labels))
 
 fig2, ax2 = plt.subplots()
+fig2 = plt.plot(rsstm[:], '-', color='gray', linewidth=2.0)
 fig2 = plt.plot(rsst[:,:], 'x', color='black')
 fig2 = plt.ylabel('Temperatura mensal media (deg C)')
 fig2 = plt.xlabel('Mes')
 fig2 = ax.xaxis.grid(True, which='major')
 fig2 = pylab.xticks(range(24), two_years)
 fig2 = plt.autoscale(enable=True, axis='x', tight=None)
+fig2 = ax.yaxis.grid(True, which='both')
 fig2 = plt.xlim(-1.0,24.0)
 fig2 = plt.savefig('OISST_AtlanticColdTongue.png')
 fig2 = plt.show()
